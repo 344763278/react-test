@@ -66,6 +66,8 @@ class ToduList extends Component {
 					!item.isDone ? item.isShow = true : item.isShow = false 
 				}) 
 				break
+			default :
+				break
 		}
  
 		this.setState({
@@ -76,8 +78,8 @@ class ToduList extends Component {
     return (
       <div className="dodu-list" style={{width:'230px',marginTop:'100px',marginLeft:'auto',marginRight:'auto'}}> 
       	<Search clickSeach={this.clickSeach}></Search> 
-      	<List data={this.state.data} clickLi={this.clickLi}></List> 
       	<Tab clickActive={this.clickActive.bind(this)}></Tab>
+      	<List data={this.state.data} clickLi={this.clickLi}></List> 
       </div>
     );
   }

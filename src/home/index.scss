@@ -1,0 +1,41 @@
+.home {
+	width: 100%;
+	min-width: 1400px;
+	height: 100%;
+	overflow: hidden;
+	.header {
+		position: absolute;
+		height: 60px;
+		line-height: 60px;
+		width: 100%; 
+		left: 0;
+		top: 0;
+		background: #ccc;
+		text-align: center;
+		font-size: 30px;
+	}
+	.left {
+		position: absolute;
+		width: 200px;
+		top: 60px;
+		bottom: 0; 
+		background: #888;
+		li {
+			height: 30px;
+			line-height: 30px;
+			padding: 0 15px;
+			box-sizing: border-box;
+			border-bottom: 1px solid #ccc;
+			cursor: pointer;
+		}
+	}
+	.right {
+		position: absolute;
+		top: 60px;
+		left: 200px;
+		right: 0;
+		bottom: 0; 
+		padding: 15px;
+		box-sizing: border-box;
+	}
+}

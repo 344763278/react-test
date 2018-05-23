@@ -1,25 +1,28 @@
 import React, { Component } from 'react'; 
+import { Provider } from 'react-redux'
+import store from './store'
 // import { BrowserRouter, Route, Switch, link, hasHistory, IndexLink, router, match} from 'react-router-dom'
-import { BrowserRouter, Route, Switch, Link, Router} from 'react-router-dom'
-import './App.css';  
-// import ToduList from './toduList'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import './App.scss';   
 import Auth from './auth'
 import Home from './home'
 
-class App extends Component {
-  render() { 
+class App extends Component { 
+  render() {  
     return (
-      <div className="App">   
-			  	<BrowserRouter> 
-				  	<div> 
-			  			<Link to="/auth">点击访问auth</Link> &nbsp;&nbsp;&nbsp;&nbsp;
-			  			<Link to="/home">点击访问home</Link> 
-			  		  <Route path="/" exact component={Auth} />
-			  		  <Route path="/auth" component={Auth} />
-			  		  <Route path="/home" component={Home} /> 
-				  	</div> 
-			    </BrowserRouter> 
-      </div>
+    	<Provider store={store}>
+	      <div className="app-wrap">   
+				  	<BrowserRouter> 
+					  	<div>
+					  		<Switch>  
+					  		  <Route path="/" exact component={Auth} />
+					  		  <Route path="/auth" component={Auth} />
+					  		  <Route path="/home" component={Home} /> 
+				  		  </Switch>
+					  	</div> 
+				    </BrowserRouter> 
+	      </div>
+      </Provider>
     );
   }
 }

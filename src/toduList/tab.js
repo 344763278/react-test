@@ -15,10 +15,10 @@ class Tab extends Component {
 	}
   render() { 
     return (
-    	<div>
-    		<button className={this.state.flag=='全部'?'active':''} onClick={this.click.bind(this, '全部')}>全部</button>
-    		<button className={this.state.flag=='已完成'?'active':''} style={{margin: '0 10px'}} onClick={this.click.bind(this, '已完成')}>已完成</button>
-    		<button className={this.state.flag=='未完成'?'active':''} onClick={this.click.bind(this, '未完成')}>未完成</button>
+    	<div className="tab">
+    		<button className={this.state.flag==='全部'?'active':''} onClick={this.click.bind(this, '全部')}>全部</button>
+    		<button className={this.state.flag==='已完成'?'active':''} style={{margin: '0 10px'}} onClick={this.click.bind(this, '已完成')}>已完成</button>
+    		<button className={this.state.flag==='未完成'?'active':''} onClick={this.click.bind(this, '未完成')}>未完成</button>
     	</div> 
     );
   }
