@@ -1,12 +1,7 @@
 import React, { Component } from 'react'  
 import {Route, Switch} from 'react-router-dom' 
 import ToduList from '../../toduList' 
-
-const Sub2 = () => (
-  <div>
-    <h2>Sub2</h2>
-  </div>
-)
+import ToduListRedux from '../../toduList-redux'  
 
 const Sub3 = () => (
   <div>
@@ -27,7 +22,7 @@ class Right extends Component {
       	<Switch>	   
 	      	<Route path="/home" exact component={ToduList} />  
 	      	<Route path="/home/sub1"  component={ToduList} />  
-	      	<Route path="/home/sub2"  component={Sub2} />  
+	      	<Route path="/home/sub2"  component={ToduListRedux} />  
 	      	<Route path="/home/sub3"  component={Sub3} />  
 	      	<Route component={NoMatch}/>
       	</Switch>

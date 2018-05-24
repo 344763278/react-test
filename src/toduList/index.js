@@ -77,6 +77,7 @@ class ToduList extends Component {
   render() { 
     return (
       <div className="dodu-list" style={{width:'230px',marginTop:'100px',marginLeft:'auto',marginRight:'auto'}}> 
+      	<h3>传统版本--页面1</h3>
       	<Search clickSeach={this.clickSeach}></Search> 
       	<Tab clickActive={this.clickActive.bind(this)}></Tab>
       	<List data={this.state.data} clickLi={this.clickLi}></List> 

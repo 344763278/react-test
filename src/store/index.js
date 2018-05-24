@@ -4,10 +4,12 @@ import thunkMiddleware from 'redux-thunk'
 
 import bigDataReducer from './bigData'
 import userInfoReducer from './userInfo' 
+import toduListReducer from './toduList' 
 
 const reducers = combineReducers({
   bigData: bigDataReducer,
   userInfo: userInfoReducer, 
+  toduList: toduListReducer, 
 });
 
 const store = createStore(reducers, {}, composeWithDevTools(applyMiddleware(thunkMiddleware)))
