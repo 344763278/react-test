@@ -9,21 +9,21 @@ const initialState = {
   },
 }
 
-export const GET_USER_INFO = 'GET_USER_INFO'
+export const SET_USER_INFO = 'SET_USER_INFO'
 
 // action
 // 获取用户信息 异步   
-export const getUserInfo = info => dispatch => {
+export const setUserInfo = info => dispatch => {
 	//模仿异步请求
 	setTimeout(() => {
-		dispatch({ type: GET_USER_INFO, info })
+		dispatch({ type: SET_USER_INFO, info })
 	}, 2000) 
 } 
  
 
 // reducer
 export default createReducer(initialState, {
-    [GET_USER_INFO]: (state, { info }) => { 
-        return { ...state, info }
+    [SET_USER_INFO]: (state, { info }) => {  
+        return { ...state, info}
     },
 })

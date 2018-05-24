@@ -10,7 +10,7 @@ const initialState = {
   ],
 }
 
-export const GETDATA = 'GETDATA'
+export const ADD_DATA = 'ADD_DATA'
 
 // action
 // 获取大数据 异步
@@ -21,14 +21,15 @@ export const GETDATA = 'GETDATA'
 // 	})
 // }  
 
-export const getData = data => dispatch => { 
-	dispatch({ type: GETDATA, data }) 
+export const addData = data => dispatch => { 
+	dispatch({ type: ADD_DATA, data }) 
 }
 
 // reducer
 export default createReducer(initialState, {
-	[GETDATA]: (state, data) => {
-		return { ...state, data}
-		// return [...state, data]
+	[ADD_DATA]: (state, {data}) => {  
+		let newState = {...state}
+		newState.list.push(data)
+		return newState
 	},
 })
